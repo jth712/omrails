@@ -5,10 +5,20 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
 </head>
 <body>
+	<%= link_to "Home", root_path %>
+	<%= link_to "About", about_path %>
+	<div class="container">
+	<%= yield %>
 
-<%= yield %>
+	<div class="footer">
+	<small>
+		<%= link_to "One Month Rails", "http:///onemonthrails.com"%> by Jordan Harris
+	</small>
+	</div>
+	</div>
 
 </body>
 </html>
